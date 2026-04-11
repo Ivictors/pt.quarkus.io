@@ -77,7 +77,7 @@ msgstr "Faremos aqui um breve resumo do tema; para mais informações, consulte 
 msgid ""
 "Virtual threads are a feature available since Java 19 (Java 21 is the first LTS version including virtual threads),\n"
 "aiming at providing a cheap alternative to platform threads for I/O-bound workloads."
-msgstr "Os threads virtuais são um recurso disponível desde o Java 19 (o Java 21 é a primeira versão LTS que inclui threads virtuais), com o objetivo de fornecer uma alternativa barata aos threads de plataforma para cargas de trabalho vinculadas a E/S."
+msgstr "As threads virtuais são um recurso disponível desde o Java 19 (o Java 21 é a primeira versão LTS que inclui threads virtuais), com o objetivo de fornecer uma alternativa barata aos threads de plataforma para cargas de trabalho vinculadas a E/S."
 
 #: _versions/3.6/guides/virtual-threads.adoc
 #, fuzzy
@@ -92,11 +92,11 @@ msgstr "Até agora, os threads de plataforma eram a unidade de simultaneidade da
 msgid ""
 "Virtual threads, on the other hand, are managed by the JVM. To be executed, they need to be mounted on a platform thread (which acts as a carrier to that virtual thread).\n"
 "As such, they have been designed to offer the following characteristics:"
-msgstr "Os threads virtuais, por outro lado, são gerenciados pela JVM. Para serem executados, eles precisam ser montados em um thread de plataforma (que atua como um portador para esse thread virtual). Dessa forma, elas foram projetadas para oferecer as seguintes características:"
+msgstr "As threads virtuais, por outro lado, são gerenciadas pela JVM. Para serem executadas, elas precisam ser montadas em uma thread de plataforma (que atua como uma portadora para essa thread virtual). Dessa forma, elas foram projetadas para oferecer as seguintes características:"
 
 #: _versions/3.6/guides/virtual-threads.adoc
 msgid "Lightweight "
-msgstr "Leve"
+msgstr "Leve."
 
 #: _versions/3.6/guides/virtual-threads.adoc
 #, fuzzy
@@ -105,7 +105,7 @@ msgid ""
 "Hence, it becomes possible to use more virtual threads than platform threads simultaneously without blowing up the memory.\n"
 "By default, platform threads are created with a stack of about 1 MB, whereas virtual threads stack is \"pay-as-you-go.\"\n"
 "You can find these numbers and other motivations for virtual threads in this https://youtu.be/lIq-x_iI-kc?t=543[presentation] given by the lead developer of project Loom (the project that added the virtual thread support to the JVM)."
-msgstr "Os threads virtuais ocupam menos espaço na memória do que os threads de plataforma. Portanto, é possível usar mais threads virtuais do que threads de plataforma simultaneamente sem estourar a memória. Por padrão, os threads de plataforma são criados com uma pilha de cerca de 1 MB, enquanto a pilha de threads virtuais é \"paga conforme o uso\". O senhor pode encontrar esses números e outras motivações para os threads virtuais nesta link:https://youtu.be/lIq-x_iI-kc?t=543[apresentação] feita pelo desenvolvedor líder do projeto Loom (o projeto que adicionou o suporte a threads virtuais à JVM)."
+msgstr "As threads virtuais ocupam menos espaço na memória do que as threads de plataforma. Portanto, é possível usar mais threads virtuais do que threads de plataforma simultaneamente sem estourar a memória. Por padrão, as threads de plataforma são criadas com uma pilha de cerca de 1 MB, enquanto a pilha de threads virtuais é \"paga conforme o uso\". Você pode encontrar esses números e outras motivações para as threads virtuais nesta link:https://youtu.be/lIq-x_iI-kc?t=543[apresentação] feita pelo desenvolvedor líder do projeto Loom (o projeto que adicionou o suporte a threads virtuais à JVM)."
 
 #: _versions/3.6/guides/virtual-threads.adoc
 msgid "Cheap to create"
@@ -158,7 +158,7 @@ msgid ""
 "In this scenario, it is worse than useless to have thousands of threads if we have tens of CPU cores, virtual threads won't enhance the performance of CPU-bound workloads.\n"
 "Even worse, when running a CPU-bound workload on a virtual thread, the virtual thread monopolizes the carrier thread on which it is mounted.\n"
 "It will either reduce the chance for the other virtual thread to run or will start creating new carrier threads, leading to high memory usage."
-msgstr "Agora sabemos que podemos criar mais threads virtuais do que threads de plataforma. O senhor pode se sentir tentado a usar threads virtuais para realizar cálculos longos (carga de trabalho vinculada à CPU). Isso é inútil e contraproducente. O CPU-bound não consiste em trocar rapidamente os threads enquanto eles precisam aguardar a conclusão de uma E/S, mas em deixá-los conectados a um núcleo da CPU para computar algo. Nesse cenário, é pior do que inútil ter milhares de threads se tivermos dezenas de núcleos de CPU, os threads virtuais não melhorarão o desempenho das cargas de trabalho vinculadas à CPU. Pior ainda, ao executar uma carga de trabalho vinculada à CPU em um thread virtual, o thread virtual monopoliza o thread de suporte no qual está montado. Ele reduzirá a chance de execução do outro thread virtual ou começará a criar novos threads de suporte, o que levará a um alto uso da memória."
+msgstr "Agora sabemos que podemos criar mais threads virtuais do que threads de plataforma. Você pode se sentir tentado a usar threads virtuais para realizar cálculos longos (carga de trabalho vinculada à CPU). Isso é inútil e contraproducente. O CPU-bound não consiste em trocar rapidamente os threads enquanto eles precisam aguardar a conclusão de uma E/S, mas em deixá-los conectados a um núcleo da CPU para computar algo. Nesse cenário, é pior do que inútil ter milhares de threads se tivermos dezenas de núcleos de CPU, os threads virtuais não melhorarão o desempenho das cargas de trabalho vinculadas à CPU. Pior ainda, ao executar uma carga de trabalho vinculada à CPU em um thread virtual, o thread virtual monopoliza o thread de suporte no qual está montado. Ele reduzirá a chance de execução do outro thread virtual ou começará a criar novos threads de suporte, o que levará a um alto uso da memória."
 
 #: _versions/3.6/guides/virtual-threads.adoc
 msgid "Run code on virtual threads using @RunOnVirtualThread"
@@ -611,7 +611,7 @@ msgid ""
 "In-container build allows building Linux 64 executables by using a `native-image` compiler running in a container.\n"
 "It avoids having to install `native-image` on your machine, and also allows configuring the GraalVM version you need.\n"
 "Note that, to use in-container build, you must have Docker or Podman installed on your machine."
-msgstr "A construção em contêiner permite a criação de executáveis Linux 64 usando um compilador `native-image` executado em um contêiner. Isso evita a necessidade de instalar o `native-image` em seu computador e também permite configurar a versão do GraalVM de que o senhor precisa. Observe que, para usar a compilação em contêiner, é necessário ter o Docker ou o Podman instalado em seu computador."
+msgstr "O build em contêiner permite a criação de executáveis Linux 64 usando um compilador `native-image` executado em um contêiner. Isso evita a necessidade de instalar o `native-image` em seu computador e também permite configurar a versão do GraalVM de que você precisa. Observe que, para usar o build em contêiner, é necessário ter o Docker ou o Podman instalado em seu computador."
 
 #: _versions/3.6/guides/virtual-threads.adoc
 msgid "Then, add to your `application.properties` file:"
